@@ -17,6 +17,8 @@
 		D943FD981B45C19A00539DB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D943FD971B45C19A00539DB7 /* Images.xcassets */; };
 		D943FD9B1B45C19A00539DB7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D943FD991B45C19A00539DB7 /* LaunchScreen.xib */; };
 		D943FDA71B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FDA61B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m */; };
+		D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */; };
+		D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */ = {isa = PBXBuildFile; fileRef = D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		D943FDA01B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixoThreeTabViewXcodeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D943FDA51B45C19A00539DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D943FDA61B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PixoThreeTabViewXcodeProjectTests.m; sourceTree = "<group>"; };
+		D943FDB01B45FB0100539DB7 /* PMUserListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMUserListTableViewController.h; sourceTree = "<group>"; };
+		D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMUserListTableViewController.m; sourceTree = "<group>"; };
+		D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockupUsers.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,9 @@
 				CF7345E41B45E7430031C438 /* PMChatGroupTableViewController.h */,
 				CF7345E51B45E7430031C438 /* PMChatGroupTableViewController.m */,
 				CF7345E91B45F2520031C438 /* MockupGroups.plist */,
+				D943FDB01B45FB0100539DB7 /* PMUserListTableViewController.h */,
+				D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */,
+				D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */,
 			);
 			path = PixoThreeTabViewXcodeProject;
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 			files = (
 				D943FD961B45C19A00539DB7 /* Main.storyboard in Resources */,
 				D943FD9B1B45C19A00539DB7 /* LaunchScreen.xib in Resources */,
+				D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */,
 				D943FD981B45C19A00539DB7 /* Images.xcassets in Resources */,
 				CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */,
 			);
@@ -239,6 +248,7 @@
 				D943FD901B45C19A00539DB7 /* FirstViewController.m in Sources */,
 				D943FD8A1B45C19A00539DB7 /* main.m in Sources */,
 				CF7345E61B45E7430031C438 /* PMChatGroupTableViewController.m in Sources */,
+				D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
