@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Group1</key>
+	<string>Class Computer Science</string>
+	<key>Group2</key>
+	<string>Class College Course</string>
+	<key>Group3</key>
+	<string>Sigma Chi</string>
+</dict>
+</plist>

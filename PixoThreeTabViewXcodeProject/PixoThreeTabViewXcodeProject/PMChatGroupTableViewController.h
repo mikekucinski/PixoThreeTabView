@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PMChatGroupTableViewController : UITableViewController
+@property (nonatomic, strong) NSDictionary *groups;
 
 @end

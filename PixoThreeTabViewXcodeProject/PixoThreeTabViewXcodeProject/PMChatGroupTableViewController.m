@@ -12,7 +12,10 @@
 
 @end
 
+
 @implementation PMChatGroupTableViewController
+
+@synthesize groups;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +25,18 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"MockupGroups" ofType:@"plist"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:file]) {
+        NSLog(@"The file exists");
+    } else {
+        NSLog(@"The file does not exist");
+    }
+    
+    groups = [[NSDictionary alloc] initWithContentsOfFile:file];
+    NSLog(@"%i", [groups count]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,24 +49,30 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    int numOfRows = [groups count];
+    return numOfRows;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    // Configure the cell...
-    
+    NSArray * values = [groups allValues];
+    cell.textLabel.text = [values objectAtIndex:indexPath.row];
+//    cell.textLabel.text = @"Test";
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
