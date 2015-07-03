@@ -76,6 +76,7 @@
             currentUserInfoCell = [tableView dequeueReusableCellWithIdentifier:@"CurrentUserCell"];
             //currentUserInfoCell = [[PMCurrentUserInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CurrentUserCell"];
         }
+        currentUserInfoCell.nameOfUser.text = @"Any Name Here";
         return currentUserInfoCell;
     }
     static NSString *CellIdentifier = @"Cell";

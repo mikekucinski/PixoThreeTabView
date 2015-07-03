@@ -9,6 +9,7 @@
 #import "PMCurrentUserInfoTableViewCell.h"
 
 @implementation PMCurrentUserInfoTableViewCell
+@synthesize nameOfUser;
 
 - (void)awakeFromNib {
     // Initialization code
