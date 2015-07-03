@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CF7345E61B45E7430031C438 /* PMChatGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7345E51B45E7430031C438 /* PMChatGroupTableViewController.m */; };
 		CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF7345E91B45F2520031C438 /* MockupGroups.plist */; };
+		CFDC5DE81B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */; };
+		CFDC5DE91B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */; };
 		D943FD8A1B45C19A00539DB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FD891B45C19A00539DB7 /* main.m */; };
 		D943FD8D1B45C19A00539DB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FD8C1B45C19A00539DB7 /* AppDelegate.m */; };
 		D943FD901B45C19A00539DB7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FD8F1B45C19A00539DB7 /* FirstViewController.m */; };
@@ -36,6 +38,9 @@
 		CF7345E51B45E7430031C438 /* PMChatGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMChatGroupTableViewController.m; sourceTree = "<group>"; };
 		CF7345E81B45EB310031C438 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CF7345E91B45F2520031C438 /* MockupGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockupGroups.plist; sourceTree = "<group>"; };
+		CFDC5DE51B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCurrentUserInfoTableViewCell.h; sourceTree = "<group>"; };
+		CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCurrentUserInfoTableViewCell.m; sourceTree = "<group>"; };
+		CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCurrentUserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		D943FD841B45C19A00539DB7 /* PixoThreeTabViewXcodeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixoThreeTabViewXcodeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D943FD881B45C19A00539DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D943FD891B45C19A00539DB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +116,9 @@
 				D943FDB01B45FB0100539DB7 /* PMUserListTableViewController.h */,
 				D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */,
 				D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */,
+				CFDC5DE51B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.h */,
+				CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */,
+				CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */,
 			);
 			path = PixoThreeTabViewXcodeProject;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 				D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */,
 				D943FD981B45C19A00539DB7 /* Images.xcassets in Resources */,
 				CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */,
+				CFDC5DE91B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +256,7 @@
 				D943FD8D1B45C19A00539DB7 /* AppDelegate.m in Sources */,
 				D943FD901B45C19A00539DB7 /* FirstViewController.m in Sources */,
 				D943FD8A1B45C19A00539DB7 /* main.m in Sources */,
+				CFDC5DE81B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m in Sources */,
 				CF7345E61B45E7430031C438 /* PMChatGroupTableViewController.m in Sources */,
 				D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */,
 			);

@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.contentInset = UIEdgeInsetsMake(30.0f, 0.0f, 0.0f, 0.0f);
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,19 +51,33 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
+    if (section==0) {
+        return 1;
+    }
+    else{
     int numOfRows = [groups count];
     return numOfRows;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    if (indexPath.section==0) {
+        PMCurrentUserInfoTableViewCell *currentUserInfoCell = [tableView dequeueReusableCellWithIdentifier:@"CurrentUserCell"];
+        if (currentUserInfoCell == nil) {
+            [tableView registerNib:[UINib nibWithNibName:@"PMCurrentUserInfoTableViewCell" bundle:nil] forCellReuseIdentifier:@"CurrentUserCell"];
+            currentUserInfoCell = [tableView dequeueReusableCellWithIdentifier:@"CurrentUserCell"];
+            //currentUserInfoCell = [[PMCurrentUserInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CurrentUserCell"];
+        }
+        return currentUserInfoCell;
+    }
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -72,6 +88,20 @@
     cell.textLabel.text = [values objectAtIndex:indexPath.row];
 //    cell.textLabel.text = @"Test";
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==0) {
+        return 160;
+    }
+    return 44;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section==0) {
+        return nil;
+    }
+    return @"University & Classes";
 }
 
 /*

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PMCurrentUserInfoTableViewCell.h"
 
 @interface PMChatGroupTableViewController : UITableViewController
 @property (nonatomic, strong) NSDictionary *groups;

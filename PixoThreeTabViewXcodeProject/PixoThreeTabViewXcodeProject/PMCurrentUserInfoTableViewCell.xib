@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMChatGroupTableViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PMCurrentUserInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name of User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIs-IS-bGW">
+                        <rect key="frame" x="13" y="8" width="208" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="0Yy-zw-Itf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Really Long Name of Organization" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckU-IX-AQc">
+                        <rect key="frame" x="13" y="49" width="208" height="38"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mNL-9T-9e1">
+                        <rect key="frame" x="229" y="8" width="62" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mNL-9T-9e1" secondAttribute="height" multiplier="1:1" id="MP0-bd-5Cv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qIs-IS-bGW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="0nU-tf-TDH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mNL-9T-9e1" secondAttribute="trailing" constant="21" id="aAD-vM-aIT"/>
+                    <constraint firstItem="mNL-9T-9e1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bAO-DQ-jXg"/>
+                    <constraint firstItem="mNL-9T-9e1" firstAttribute="leading" secondItem="qIs-IS-bGW" secondAttribute="trailing" constant="8" id="hQb-3J-uUn"/>
+                    <constraint firstItem="qIs-IS-bGW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="oD8-AY-tev"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="aAD-vM-aIT"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>
