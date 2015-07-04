@@ -127,14 +127,11 @@
 				CFDC5DE51B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.h */,
 				CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */,
 				CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */,
-<<<<<<< HEAD
 				D9E90D611B474A69004EEFF2 /* PMContactTableViewCell.h */,
 				D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */,
 				D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */,
-=======
 				CFDC5DEA1B470F0B00E30D75 /* PMDataMockup.h */,
 				CFDC5DEB1B470F0B00E30D75 /* PMDataMockup.m */,
->>>>>>> origin
 			);
 			path = PixoThreeTabViewXcodeProject;
 			sourceTree = "<group>";
