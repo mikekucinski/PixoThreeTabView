@@ -24,9 +24,11 @@
 		D943FDA71B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FDA61B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m */; };
 		D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */; };
 		D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */ = {isa = PBXBuildFile; fileRef = D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */; };
-		F4DE1EE1FCA2B75C489676BD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F18D2833526A0BAD7E3FCA /* libPods.a */; };
+		D9E1E4741B484DF000518866 /* PMContactSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E1E4721B484DF000518866 /* PMContactSearchTableViewCell.m */; };
+		D9E1E4751B484DF000518866 /* PMContactSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E1E4731B484DF000518866 /* PMContactSearchTableViewCell.xib */; };
 		D9E90D641B474A69004EEFF2 /* PMContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */; };
 		D9E90D651B474A69004EEFF2 /* PMContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */; };
+		F4DE1EE1FCA2B75C489676BD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F18D2833526A0BAD7E3FCA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,10 +74,13 @@
 		D943FDB01B45FB0100539DB7 /* PMUserListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMUserListTableViewController.h; sourceTree = "<group>"; };
 		D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMUserListTableViewController.m; sourceTree = "<group>"; };
 		D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockupUsers.plist; sourceTree = "<group>"; };
-		F1F18D2833526A0BAD7E3FCA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E1E4711B484DF000518866 /* PMContactSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMContactSearchTableViewCell.h; sourceTree = "<group>"; };
+		D9E1E4721B484DF000518866 /* PMContactSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMContactSearchTableViewCell.m; sourceTree = "<group>"; };
+		D9E1E4731B484DF000518866 /* PMContactSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMContactSearchTableViewCell.xib; sourceTree = "<group>"; };
 		D9E90D611B474A69004EEFF2 /* PMContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMContactTableViewCell.h; sourceTree = "<group>"; };
 		D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMContactTableViewCell.m; sourceTree = "<group>"; };
 		D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMContactTableViewCell.xib; sourceTree = "<group>"; };
+		F1F18D2833526A0BAD7E3FCA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +142,9 @@
 		D943FD861B45C19A00539DB7 /* PixoThreeTabViewXcodeProject */ = {
 			isa = PBXGroup;
 			children = (
+				D9E1E4711B484DF000518866 /* PMContactSearchTableViewCell.h */,
+				D9E1E4721B484DF000518866 /* PMContactSearchTableViewCell.m */,
+				D9E1E4731B484DF000518866 /* PMContactSearchTableViewCell.xib */,
 				D943FD8B1B45C19A00539DB7 /* AppDelegate.h */,
 				D943FD8C1B45C19A00539DB7 /* AppDelegate.m */,
 				D943FD8E1B45C19A00539DB7 /* FirstViewController.h */,
@@ -279,6 +287,7 @@
 				D943FD961B45C19A00539DB7 /* Main.storyboard in Resources */,
 				D943FD9B1B45C19A00539DB7 /* LaunchScreen.xib in Resources */,
 				D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */,
+				D9E1E4751B484DF000518866 /* PMContactSearchTableViewCell.xib in Resources */,
 				CF0A77251B475E4400E3C8A2 /* PMGroupTableViewCell.xib in Resources */,
 				D943FD981B45C19A00539DB7 /* Images.xcassets in Resources */,
 				CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */,
@@ -339,6 +348,7 @@
 				D943FD8D1B45C19A00539DB7 /* AppDelegate.m in Sources */,
 				D943FD901B45C19A00539DB7 /* FirstViewController.m in Sources */,
 				D943FD8A1B45C19A00539DB7 /* main.m in Sources */,
+				D9E1E4741B484DF000518866 /* PMContactSearchTableViewCell.m in Sources */,
 				CFDC5DE81B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m in Sources */,
 				CF7345E61B45E7430031C438 /* PMChatGroupTableViewController.m in Sources */,
 				D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */,
