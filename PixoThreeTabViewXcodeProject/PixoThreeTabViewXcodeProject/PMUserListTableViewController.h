@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PMContactTableViewCell.h"
 
 @interface PMUserListTableViewController : UITableViewController
-@property (nonatomic, strong) NSDictionary *users;
+@property (nonatomic, strong) NSDictionary *contacts;
 
 @end
