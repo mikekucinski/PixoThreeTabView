@@ -22,6 +22,8 @@
 		D943FDA71B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FDA61B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m */; };
 		D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */; };
 		D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */ = {isa = PBXBuildFile; fileRef = D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */; };
+		D9E90D641B474A69004EEFF2 /* PMContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */; };
+		D9E90D651B474A69004EEFF2 /* PMContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		D943FDB01B45FB0100539DB7 /* PMUserListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMUserListTableViewController.h; sourceTree = "<group>"; };
 		D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMUserListTableViewController.m; sourceTree = "<group>"; };
 		D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockupUsers.plist; sourceTree = "<group>"; };
+		D9E90D611B474A69004EEFF2 /* PMContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMContactTableViewCell.h; sourceTree = "<group>"; };
+		D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMContactTableViewCell.m; sourceTree = "<group>"; };
+		D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMContactTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,9 @@
 				CFDC5DE51B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.h */,
 				CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */,
 				CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */,
+				D9E90D611B474A69004EEFF2 /* PMContactTableViewCell.h */,
+				D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */,
+				D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */,
 				CFDC5DEA1B470F0B00E30D75 /* PMDataMockup.h */,
 				CFDC5DEB1B470F0B00E30D75 /* PMDataMockup.m */,
 			);
@@ -240,6 +248,7 @@
 				D943FD981B45C19A00539DB7 /* Images.xcassets in Resources */,
 				CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */,
 				CFDC5DE91B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib in Resources */,
+				D9E90D651B474A69004EEFF2 /* PMContactTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D943FD931B45C19A00539DB7 /* SecondViewController.m in Sources */,
+				D9E90D641B474A69004EEFF2 /* PMContactTableViewCell.m in Sources */,
 				D943FD8D1B45C19A00539DB7 /* AppDelegate.m in Sources */,
 				D943FD901B45C19A00539DB7 /* FirstViewController.m in Sources */,
 				D943FD8A1B45C19A00539DB7 /* main.m in Sources */,
