@@ -11,6 +11,7 @@
 		CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF7345E91B45F2520031C438 /* MockupGroups.plist */; };
 		CFDC5DE81B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */; };
 		CFDC5DE91B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */; };
+		CFDC5DEC1B470F0B00E30D75 /* PMDataMockup.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC5DEB1B470F0B00E30D75 /* PMDataMockup.m */; };
 		D943FD8A1B45C19A00539DB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FD891B45C19A00539DB7 /* main.m */; };
 		D943FD8D1B45C19A00539DB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FD8C1B45C19A00539DB7 /* AppDelegate.m */; };
 		D943FD901B45C19A00539DB7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FD8F1B45C19A00539DB7 /* FirstViewController.m */; };
@@ -43,6 +44,8 @@
 		CFDC5DE51B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCurrentUserInfoTableViewCell.h; sourceTree = "<group>"; };
 		CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCurrentUserInfoTableViewCell.m; sourceTree = "<group>"; };
 		CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCurrentUserInfoTableViewCell.xib; sourceTree = "<group>"; };
+		CFDC5DEA1B470F0B00E30D75 /* PMDataMockup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMDataMockup.h; sourceTree = "<group>"; };
+		CFDC5DEB1B470F0B00E30D75 /* PMDataMockup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMDataMockup.m; sourceTree = "<group>"; };
 		D943FD841B45C19A00539DB7 /* PixoThreeTabViewXcodeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixoThreeTabViewXcodeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D943FD881B45C19A00539DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D943FD891B45C19A00539DB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -124,9 +127,14 @@
 				CFDC5DE51B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.h */,
 				CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */,
 				CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */,
+<<<<<<< HEAD
 				D9E90D611B474A69004EEFF2 /* PMContactTableViewCell.h */,
 				D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */,
 				D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */,
+=======
+				CFDC5DEA1B470F0B00E30D75 /* PMDataMockup.h */,
+				CFDC5DEB1B470F0B00E30D75 /* PMDataMockup.m */,
+>>>>>>> origin
 			);
 			path = PixoThreeTabViewXcodeProject;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 				CFDC5DE81B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m in Sources */,
 				CF7345E61B45E7430031C438 /* PMChatGroupTableViewController.m in Sources */,
 				D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */,
+				CFDC5DEC1B470F0B00E30D75 /* PMDataMockup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

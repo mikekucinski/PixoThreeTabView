@@ -28,6 +28,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    /*
     NSString *file = [[NSBundle mainBundle] pathForResource:@"MockupGroups" ofType:@"plist"];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -39,6 +40,12 @@
     
     groups = [[NSDictionary alloc] initWithContentsOfFile:file];
     NSLog(@"%i", [groups count]);
+    */
+    NSError *error = nil;
+    PMDataMockup *dataModel = [[PMDataMockup alloc] init];
+    NSString *json_string = [dataModel getJSONData];
+    NSLog(@"%@", json_string);
+    groups = [NSJSONSerialization JSONObjectWithData:[json_string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,7 +58,8 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 2;
+    NSArray *groupSections = [groups objectForKey:@"GroupSections"];
+    return 1 + [groupSections count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -61,8 +69,11 @@
         return 1;
     }
     else{
-    int numOfRows = [groups count];
-    return numOfRows;
+        NSArray *groupSections = [groups objectForKey:@"GroupSections"];
+        NSDictionary *groupSection = [groupSections objectAtIndex:(section-1)];
+        NSArray *sectionGroups = [groupSection objectForKey:@"Groups"];
+        int numOfRows = [sectionGroups count];
+        return numOfRows;
     }
 }
 
@@ -85,8 +96,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSArray * values = [groups allValues];
-    cell.textLabel.text = [values objectAtIndex:indexPath.row];
+    NSArray *groupSections = [groups objectForKey:@"GroupSections"];
+    NSDictionary *groupSection = [groupSections objectAtIndex:(indexPath.section-1)];
+    NSArray *sectionGroups = [groupSection objectForKey:@"Groups"];
+    
+    cell.textLabel.text = [[sectionGroups objectAtIndex:indexPath.row] objectForKey:@"Name"];
 //    cell.textLabel.text = @"Test";
     return cell;
 }
@@ -102,7 +116,9 @@
     if (section==0) {
         return nil;
     }
-    return @"University & Classes";
+    NSArray *groupSections = [groups objectForKey:@"GroupSections"];
+    NSDictionary *groupSection = [groupSections objectAtIndex:(section-1)];
+    return [groupSection objectForKey:@"Name"];
 }
 
 /*
