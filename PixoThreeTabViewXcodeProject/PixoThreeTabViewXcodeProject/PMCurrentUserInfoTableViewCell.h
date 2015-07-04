@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PMCurrentUserInfoTableViewCell : UITableViewCell
-@property (nonatomic,weak) IBOutlet UILabel   *nameOfUser;
+@property (nonatomic,weak) IBOutlet UILabel         *nameLabelOfUser;
+@property (nonatomic,weak) IBOutlet UIImageView     *thumbNailOfUser;
 
 @end

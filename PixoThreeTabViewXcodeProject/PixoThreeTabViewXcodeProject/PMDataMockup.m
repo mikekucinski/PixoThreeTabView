@@ -13,6 +13,7 @@
     NSString *dataModel = @"{\"CurrentUserInfo\": \
                                 {\"Name\":\"Michael Rowe\", \
                                  \"Organization\":\"University of Washington\", \
+                                 \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\", \
                                  \"Unread Messages\":\"12\", \
                                  \"Messages\":[ \
                                     {\"Msg\":\"Don\'t forget to register\"}, \

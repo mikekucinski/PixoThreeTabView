@@ -12,6 +12,8 @@
 
 @end
 
+NSString * const PMCURRENTUSERCELLIDENTIFIER = @"CurrentUserCell";
+NSString * const PMREGULARCELLIDENTIFIER = @"Cell";
 
 @implementation PMChatGroupTableViewController
 
@@ -21,6 +23,8 @@
     [super viewDidLoad];
     
     self.tableView.contentInset = UIEdgeInsetsMake(30.0f, 0.0f, 0.0f, 0.0f);
+    
+    self.filteredGroupArray = [NSMutableArray arrayWithCapacity:2];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -45,6 +49,8 @@
     PMDataMockup *dataModel = [[PMDataMockup alloc] init];
     NSString *json_string = [dataModel getJSONData];
     NSLog(@"%@", json_string);
+    [self.tableView registerNib:[UINib nibWithNibName:@"PMCurrentUserInfoTableViewCell" bundle:nil] forCellReuseIdentifier:PMCURRENTUSERCELLIDENTIFIER];
+    [self.tableView registerNib:[UINib nibWithNibName:@"PMGroupTableViewCell" bundle:nil] forCellReuseIdentifier:PMREGULARCELLIDENTIFIER];
     groups = [NSJSONSerialization JSONObjectWithData:[json_string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
 }
 
@@ -58,8 +64,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return 2;
+    }
+    else {
     NSArray *groupSections = [groups objectForKey:@"GroupSections"];
     return 1 + [groupSections count];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -79,29 +90,29 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     if (indexPath.section==0) {
-        PMCurrentUserInfoTableViewCell *currentUserInfoCell = [tableView dequeueReusableCellWithIdentifier:@"CurrentUserCell"];
+        PMCurrentUserInfoTableViewCell *currentUserInfoCell = [tableView dequeueReusableCellWithIdentifier:PMCURRENTUSERCELLIDENTIFIER];
         if (currentUserInfoCell == nil) {
-            [tableView registerNib:[UINib nibWithNibName:@"PMCurrentUserInfoTableViewCell" bundle:nil] forCellReuseIdentifier:@"CurrentUserCell"];
-            currentUserInfoCell = [tableView dequeueReusableCellWithIdentifier:@"CurrentUserCell"];
-            //currentUserInfoCell = [[PMCurrentUserInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CurrentUserCell"];
+            currentUserInfoCell = [tableView dequeueReusableCellWithIdentifier:PMCURRENTUSERCELLIDENTIFIER];
         }
-        currentUserInfoCell.nameOfUser.text = @"Any Name Here";
+//        currentUserInfoCell.searchBar.delegate = self;
+        NSDictionary *currentUserInfoDict = [groups objectForKey:@"CurrentUserInfo"];
+        currentUserInfoCell.nameLabelOfUser.text = [currentUserInfoDict objectForKey:@"Name"];
+        NSString *thumbNailStr = [currentUserInfoDict objectForKey:@"ThumbNailURL"];
+        NSLog(@"%@",thumbNailStr);
+        [currentUserInfoCell.thumbNailOfUser setImageWithURL:[NSURL URLWithString:thumbNailStr] placeholderImage:[UIImage imageNamed:@"second"]];
+//        [currentUserInfoCell.thumbNailOfUser setImageWithURL:[NSURL URLWithString:thumbNailStr]];
+        
         return currentUserInfoCell;
     }
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    PMGroupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PMREGULARCELLIDENTIFIER];
     
     NSArray *groupSections = [groups objectForKey:@"GroupSections"];
     NSDictionary *groupSection = [groupSections objectAtIndex:(indexPath.section-1)];
     NSArray *sectionGroups = [groupSection objectForKey:@"Groups"];
     
-    cell.textLabel.text = [[sectionGroups objectAtIndex:indexPath.row] objectForKey:@"Name"];
-//    cell.textLabel.text = @"Test";
+    cell.nameLabelOfGroup.text = [[sectionGroups objectAtIndex:indexPath.row] objectForKey:@"Name"];
+
     return cell;
 }
 
@@ -164,5 +175,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

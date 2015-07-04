@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "PMCurrentUserInfoTableViewCell.h"
 #import "PMDataMockup.h"
+#import <UIImageView+AFNetworking.h>
+#import "PMGroupTableViewCell.h"
 
-@interface PMChatGroupTableViewController : UITableViewController
+@interface PMChatGroupTableViewController : UITableViewController<UISearchBarDelegate>
 @property (nonatomic, strong) NSDictionary *groups;
+@property (strong,nonatomic) NSMutableArray *filteredGroupArray;
 
 @end

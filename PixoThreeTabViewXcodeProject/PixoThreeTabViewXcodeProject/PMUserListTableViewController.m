@@ -7,6 +7,8 @@
 //
 
 #import "PMUserListTableViewController.h"
+#import "PMContactTableViewCell.h"
+
 
 @interface PMUserListTableViewController ()
 
@@ -14,11 +16,17 @@
 
 @implementation PMUserListTableViewController
 
-@synthesize users;
+@synthesize contacts;
+
+
+static NSString *CellIdentifier = @"Contact Cell";
+static NSString *nibName = @"PMContactTableViewCell";
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:CellIdentifier];
     
     self.tableView.contentInset = UIEdgeInsetsMake(30.0f, 0.0f, 0.0f, 0.0f);
 
@@ -39,8 +47,8 @@
         NSLog(@"The file does not exist");
     }
     
-    users = [[NSDictionary alloc] initWithContentsOfFile:file];
-    NSLog(@"%i", [users count]);
+    contacts = [[NSDictionary alloc] initWithContentsOfFile:file];
+    NSLog(@"%lu", (unsigned long)[contacts count]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,34 +58,57 @@
 
 #pragma mark - Table view data source
 
+const NSInteger numberOfContactsSections = 2;
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return numberOfContactsSections;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
 
-    int numOfRows = [users count];
-    return numOfRows;
+    if (section==0) {
+        return 1;
+    }
+    else{
+        NSUInteger numOfRows = [contacts count];
+        return numOfRows;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
+    if (indexPath.section==0) {
+        PMContactTableViewCell *currentContactCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+        currentContactCell.nameOfContactLabel.text = @"Any Name Here";
+        return currentContactCell;
+    }
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSArray * values = [users allValues];
+    NSArray * values = [contacts allValues];
     cell.textLabel.text = [values objectAtIndex:indexPath.row];
     //    cell.textLabel.text = @"Test";
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==0) {
+        return 160;
+    }
+    return 44;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section==0) {
+        return nil;
+    }
+    return NSLocalizedString(@"Title in this Section", nil);
+}
 
 /*
 // Override to support conditional editing of the table view.
