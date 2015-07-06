@@ -14,41 +14,74 @@
                 <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Contact Label Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccE-vL-wHH">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact Label Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccE-vL-wHH">
                         <rect key="frame" x="74" y="19" width="201" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t8c-OZ-5rV">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="t8c-OZ-5rV">
                         <rect key="frame" x="8" y="15" width="62" height="30"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="eba-Lb-Szt"/>
+                            <constraint firstAttribute="width" constant="40" id="hEv-EM-vy1"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="30"/>
+                                <integer key="value" value="20"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7f-Vd-ZxH">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k7f-Vd-ZxH">
                         <rect key="frame" x="271" y="15" width="34" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="0Ny-wD-4ob"/>
+                            <constraint firstAttribute="width" constant="12" id="as8-hS-gNn"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="12" id="v4S-7F-kig"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="30"/>
+                                <integer key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="v4S-7F-kig"/>
+                            </mask>
+                        </variation>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="t8c-OZ-5rV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="3Fg-Fo-v1x"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="t8c-OZ-5rV" secondAttribute="bottom" constant="-6" id="ErI-U6-H83"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ccE-vL-wHH" secondAttribute="bottom" constant="4" id="HGL-Jg-dob"/>
+                    <constraint firstItem="t8c-OZ-5rV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Lbr-ob-LC8"/>
                     <constraint firstItem="t8c-OZ-5rV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="XAl-b1-m2x"/>
                     <constraint firstAttribute="trailingMargin" secondItem="k7f-Vd-ZxH" secondAttribute="trailing" constant="8" id="cRK-nQ-K3k"/>
-                    <constraint firstItem="ccE-vL-wHH" firstAttribute="leading" secondItem="t8c-OZ-5rV" secondAttribute="trailing" constant="8" id="sf0-g6-3YS"/>
+                    <constraint firstItem="t8c-OZ-5rV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="22" id="csi-yT-8iE"/>
+                    <constraint firstItem="ccE-vL-wHH" firstAttribute="leading" secondItem="t8c-OZ-5rV" secondAttribute="trailing" constant="15" id="sf0-g6-3YS"/>
                     <constraint firstItem="k7f-Vd-ZxH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="vNh-Zd-glT"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="3Fg-Fo-v1x"/>
+                        <exclude reference="Lbr-ob-LC8"/>
+                        <exclude reference="csi-yT-8iE"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="nameOfContactLabel" destination="ccE-vL-wHH" id="wIl-9x-HYh"/>
+                <outlet property="thisContactIsCurrentlyOnlineIndication" destination="k7f-Vd-ZxH" id="iXU-qZ-Wmq"/>
+                <outlet property="thumbNailOfUser" destination="t8c-OZ-5rV" id="XIs-h9-QCQ"/>
             </connections>
-            <point key="canvasLocation" x="554" y="322"/>
+            <point key="canvasLocation" x="489" y="226"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
 </document>

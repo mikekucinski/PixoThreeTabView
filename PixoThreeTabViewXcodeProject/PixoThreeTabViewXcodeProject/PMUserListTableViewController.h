@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PMContactTableViewCell.h"
+#import "PMContactSearchTableViewCell.h"
+#import "PMDataMockup.h"
+#import <UIImageView+AFNetworking.h>
+
+
 
 @interface PMUserListTableViewController : UITableViewController
 @property (nonatomic, strong) NSDictionary *contacts;

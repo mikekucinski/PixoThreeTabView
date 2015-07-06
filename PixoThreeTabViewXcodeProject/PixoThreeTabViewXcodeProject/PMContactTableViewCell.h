@@ -10,5 +10,7 @@
 
 @interface PMContactTableViewCell : UITableViewCell
 @property (nonatomic,weak) IBOutlet UILabel   *nameOfContactLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbNailOfUser;
+@property (weak, nonatomic) IBOutlet UIImageView *thisContactIsCurrentlyOnlineIndication;
 
 @end

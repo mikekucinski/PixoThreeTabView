@@ -7,7 +7,6 @@
 //
 
 #import "PMUserListTableViewController.h"
-#import "PMContactTableViewCell.h"
 
 
 @interface PMUserListTableViewController ()
@@ -19,38 +18,39 @@
 @synthesize contacts;
 
 
-static NSString *CellIdentifier = @"Contact Cell";
-static NSString *nibName = @"PMContactTableViewCell";
+static NSString *contactCellIdentifier = @"Contact Cell";
+static NSString *contactSearchCellIdentifier = @"Contact Search Cell";
+static NSString *contactNibName = @"PMContactTableViewCell";
+static NSString *contactSearchNibName = @"PMContactSearchTableViewCell";
+
+UIImage * simpleImageWithColorGreen;
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:CellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:contactNibName bundle:nil] forCellReuseIdentifier:contactCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:contactSearchNibName bundle:nil] forCellReuseIdentifier:contactSearchCellIdentifier];
     
     self.tableView.contentInset = UIEdgeInsetsMake(30.0f, 0.0f, 0.0f, 0.0f);
 
+    NSError *error = nil;
+    PMDataMockup *dataModel = [[PMDataMockup alloc] init];
+    NSString *json_string = [dataModel getJSONData];
+    NSLog(@"%@", json_string);
+    contacts = [NSJSONSerialization JSONObjectWithData:[json_string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    simpleImageWithColorGreen = [self imageWithColor:[UIColor colorWithRed:0/256.0 green:256/256.0 blue:0/256.0 alpha:1.0]];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-
-    NSString *file = [[NSBundle mainBundle] pathForResource:@"MockupUsers" ofType:@"plist"];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if ([fileManager fileExistsAtPath:file]) {
-        NSLog(@"The file exists");
-    } else {
-        NSLog(@"The file does not exist");
+    /*
+    if ([self.tableView respondsToSelector:@selector(setSectionIndexColor:)]) {
+        self.tableView.sectionIndexBackgroundColor = [UIColor greenColor];
+        self.tableView.sectionIndexTrackingBackgroundColor = [UIColor orangeColor];
     }
-    
-    contacts = [[NSDictionary alloc] initWithContentsOfFile:file];
-    NSLog(@"%lu", (unsigned long)[contacts count]);
+     */
 }
-
+ 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -58,47 +58,65 @@ static NSString *nibName = @"PMContactTableViewCell";
 
 #pragma mark - Table view data source
 
-const NSInteger numberOfContactsSections = 2;
+const NSInteger noSectionTitleForTopCellSoOffset_1 = 1;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return numberOfContactsSections;
+
+    NSArray *groupSections = [contacts objectForKey:@"UserSections"];
+    return noSectionTitleForTopCellSoOffset_1 + [groupSections count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-
     if (section==0) {
         return 1;
     }
     else{
-        NSUInteger numOfRows = [contacts count];
+        NSArray *groupSections = [contacts objectForKey:@"UserSections"];
+        NSDictionary *groupSection = [groupSections objectAtIndex:(section-1)];
+        NSArray *sectionGroups = [groupSection objectForKey:@"Users"];
+        NSUInteger numOfRows = [sectionGroups count];
         return numOfRows;
     }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if (indexPath.section==0) {
-        PMContactTableViewCell *currentContactCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        PMContactSearchTableViewCell *currentContactSearchCell = [tableView dequeueReusableCellWithIdentifier:contactSearchCellIdentifier];
 
-        currentContactCell.nameOfContactLabel.text = @"Any Name Here";
-        return currentContactCell;
-    }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        return currentContactSearchCell;
     }
     
-    NSArray * values = [contacts allValues];
-    cell.textLabel.text = [values objectAtIndex:indexPath.row];
-    //    cell.textLabel.text = @"Test";
-    return cell;
+    PMContactTableViewCell *currentContactCell = [tableView dequeueReusableCellWithIdentifier:contactCellIdentifier];
+
+    NSArray *contactSections = [contacts objectForKey:@"UserSections"];
+    NSDictionary *contactSection = [contactSections objectAtIndex:(indexPath.section-1)];
+    NSArray *sectionContacts = [contactSection objectForKey:@"Users"];
+    
+    currentContactCell.nameOfContactLabel.text = [[sectionContacts objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    
+    NSDictionary *currentUserInfoDict = [contacts objectForKey:@"CurrentUserInfo"];
+    NSString *thumbNailStr = [currentUserInfoDict objectForKey:@"ThumbNailURL"];
+    NSLog(@"%@",thumbNailStr);
+    [currentContactCell.thumbNailOfUser setImageWithURL:[NSURL URLWithString:thumbNailStr] placeholderImage:[UIImage imageNamed:@"second"]];
+    //[currentContactCell.thisContactIsCurrentlyOnlineIndication setImageWithURL:[NSURL URLWithString:thumbNailStr] placeholderImage:[UIImage imageNamed:@"second"]];
+    [currentContactCell.thisContactIsCurrentlyOnlineIndication setImage:simpleImageWithColorGreen];
+    if (indexPath.row %2 == 0) {
+        [currentContactCell.thisContactIsCurrentlyOnlineIndication setAlpha:0 ];
+    }
+    else
+    {
+        [currentContactCell.thisContactIsCurrentlyOnlineIndication setAlpha:1 ];
+    }
+    
+    return currentContactCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
-        return 160;
+        return 44;
     }
     return 44;
 }
@@ -107,8 +125,76 @@ const NSInteger numberOfContactsSections = 2;
     if (section==0) {
         return nil;
     }
-    return NSLocalizedString(@"Title in this Section", nil);
+    
+    NSArray *contactSections = [contacts objectForKey:@"UserSections"];
+    NSDictionary *contactSection = [contactSections objectAtIndex:(section-1)];
+    return [contactSection objectForKey:@"Name"];
 }
+
+/*
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    // Mike notes : this is from http://stackoverflow.com/questions/6662301/how-to-change-font-color-of-section-index-titles
+    
+    // Background color
+    //view.tintColor = [UIColor blueColor];
+    
+    //////tableView.sectionIndexColor = [UIColor greenColor];
+    ;
+}
+
+- (UIView*)tableView:(UITableView*)tableView viewForFooterInSection:(NSInteger)section {
+    NSString* sectionFooter = [self tableView:tableView titleForFooterInSection:section];
+    
+    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)]; //create a view- the width should usually be the width of the screen
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    
+    label.backgroundColor = [UIColor blueColor];
+    label.textColor = [UIColor whiteColor];
+    label.text = sectionFooter;
+    
+    [view addSubview:label];
+    
+    return view;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    // from http://stackoverflow.com/questions/1597662/how-can-i-set-rich-text-properties-on-a-uitableview-footer
+
+    if ( section == 1 )
+    {
+        return NSLocalizedString(@"Section_1_text", @"");
+    }
+    if ( section == 2 )
+    {
+        return NSLocalizedString(@"Section_2_text","");
+    }
+    return nil;  
+}
+ 
+ */
+
+
+- (UIImage *)imageWithColor:(UIColor *)color {
+    
+    // See http://stackoverflow.com/questions/14523348/how-to-change-the-background-color-of-a-uibutton-while-its-highlighted  about setting background image.
+    
+    
+    CGRect rect = CGRectMake(0.0f, 0.0f, 50.0f, 50.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.

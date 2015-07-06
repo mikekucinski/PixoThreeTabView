@@ -45,19 +45,35 @@
                                     { \
                                        \"Name\":\"Recent Users\", \
                                        \"Users\":[ \
-                                                 {\"Name\":\"Katie Derthick\"}, \
-                                                 {\"Name\":\"Tim Robbins\"}, \
-                                                 {\"Name\":\"Michael Jones\"}, \
-                                                 {\"Name\":\"Linda Stevens\"}, \
+    {\"Name\":\"Katie Derthick\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Tim Robbins\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Michael Jones\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Linda Stevens\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
                                         ] \
                                     }, \
                                     { \
                                         \"Name\":\"Current Channel\", \
                                         \"Users\":[ \
-                                                  {\"Name\":\"Jessie Spencers\"}, \
-                                                  {\"Name\":\"Peyton Cunningham\"}, \
-                                                  {\"Name\":\"Roger Ellis\"}, \
-                                                  {\"Name\":\"Clinton Rogers\"}, \
+    {\"Name\":\"Jessie Spencers\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Peyton Cunningham\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Roger Ellis\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Clinton Rogers\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Clinton 1\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Clinton 2\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Clinton 3\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
+    {\"Name\":\"Clinton 4\",\
+    \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
                                         ] \
                                     } \
                             ]  \
