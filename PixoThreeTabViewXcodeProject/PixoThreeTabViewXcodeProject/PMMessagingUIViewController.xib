@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMMessagingUIViewController">
             <connections>
+                <outlet property="collectionView" destination="9Ip-dG-Zjb" id="lPC-Jj-T6M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,6 +18,8 @@
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Ip-dG-Zjb">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="477"/>
+                    <color key="backgroundColor" red="0.94535495920000001" green="0.94535495920000001" blue="0.94535495920000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="540" id="0cG-Gm-ugy"/>
                     </constraints>
@@ -32,47 +35,53 @@
                         </mask>
                     </variation>
                 </collectionView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="TLy-8g-LRF">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="TLy-8g-LRF">
                     <rect key="frame" x="8" y="485" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Hb2-Ud-CL6"/>
                         <constraint firstAttribute="width" secondItem="TLy-8g-LRF" secondAttribute="height" multiplier="1:1" id="k7b-JP-s7x"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-VQ-Qht">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.png" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-VQ-Qht">
                     <rect key="frame" x="542" y="485" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="77G-AF-IeZ"/>
                         <constraint firstAttribute="width" secondItem="yqz-VQ-Qht" secondAttribute="height" multiplier="1:1" id="di6-2p-YG5"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-if-gT5">
-                    <rect key="frame" x="61" y="495" width="468" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="87f-SY-xSf">
+                    <rect key="frame" x="66" y="488" width="468" height="44"/>
+                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ad6-if-gT5" secondAttribute="bottom" constant="75" id="3Jw-0K-7WE"/>
                 <constraint firstAttribute="bottom" secondItem="yqz-VQ-Qht" secondAttribute="bottom" constant="65" id="6tK-vX-e0G"/>
-                <constraint firstItem="ad6-if-gT5" firstAttribute="leading" secondItem="TLy-8g-LRF" secondAttribute="trailing" constant="8" id="FOn-wS-oEL"/>
+                <constraint firstItem="yqz-VQ-Qht" firstAttribute="leading" secondItem="87f-SY-xSf" secondAttribute="trailing" constant="8" id="EmJ-vt-cVK"/>
                 <constraint firstItem="TLy-8g-LRF" firstAttribute="top" secondItem="9Ip-dG-Zjb" secondAttribute="bottom" constant="8" id="Gkk-Nr-tdh"/>
                 <constraint firstAttribute="bottom" secondItem="yqz-VQ-Qht" secondAttribute="bottom" constant="72" id="Le1-K1-CAp"/>
+                <constraint firstItem="87f-SY-xSf" firstAttribute="top" secondItem="9Ip-dG-Zjb" secondAttribute="bottom" constant="11" id="QfV-BY-Snr"/>
                 <constraint firstItem="TLy-8g-LRF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="VM3-FE-Hvo"/>
                 <constraint firstItem="9Ip-dG-Zjb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ViU-MK-igh"/>
+                <constraint firstAttribute="bottom" secondItem="87f-SY-xSf" secondAttribute="bottom" constant="68" id="Xpm-ul-B5W"/>
+                <constraint firstItem="87f-SY-xSf" firstAttribute="leading" secondItem="TLy-8g-LRF" secondAttribute="trailing" constant="8" id="aHD-9I-nU0"/>
                 <constraint firstAttribute="trailing" secondItem="9Ip-dG-Zjb" secondAttribute="trailing" id="arA-hs-Qof"/>
                 <constraint firstItem="9Ip-dG-Zjb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c40-Nt-Qjo"/>
                 <constraint firstAttribute="bottom" secondItem="TLy-8g-LRF" secondAttribute="bottom" constant="65" id="cHI-uT-TvJ"/>
-                <constraint firstAttribute="bottom" secondItem="ad6-if-gT5" secondAttribute="bottom" constant="72" id="o0m-Sh-ei4"/>
                 <constraint firstAttribute="bottom" secondItem="TLy-8g-LRF" secondAttribute="bottom" constant="80" id="rFa-ZE-Ehz"/>
-                <constraint firstItem="yqz-VQ-Qht" firstAttribute="leading" secondItem="ad6-if-gT5" secondAttribute="trailing" constant="8" id="v2d-DQ-tOi"/>
                 <constraint firstAttribute="trailing" secondItem="yqz-VQ-Qht" secondAttribute="trailing" constant="8" id="vxD-7f-TG0"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="rFa-ZE-Ehz"/>
-                    <exclude reference="o0m-Sh-ei4"/>
                     <exclude reference="Le1-K1-CAp"/>
                 </mask>
             </variation>
@@ -80,7 +89,7 @@
         </view>
     </objects>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="bubble.png" width="128" height="128"/>
+        <image name="plus.png" width="128" height="128"/>
     </resources>
 </document>

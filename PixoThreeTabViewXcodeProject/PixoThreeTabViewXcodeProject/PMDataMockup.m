@@ -10,9 +10,9 @@
 
 @implementation PMDataMockup
 -(NSString*)getJSONData{
-    NSString *dataModel = @"{\"CurrentUserInfo\": \
-                                {\"Name\":\"Michael Rowe\", \
-                                 \"Organization\":\"University of Washington\", \
+  NSString *dataModel = @"{\"CurrentUserInfo\": \
+                            {\"Name\":\"Michael Rowe\", \
+                              \"Organization\":\"University of Washington\", \
                                  \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\", \
                                  \"Unread Messages\":\"12\", \
                                  \"Messages\":[ \
@@ -76,7 +76,13 @@
     \"ThumbNailURL\":\"http://www.vendease.com/images/bean.jpg\"}, \
                                         ] \
                                     } \
-                            ]  \
+                          ],  \
+                          \"Messages\": [ \
+                            {\"Message\":\"Some messages here that is loooooooooooooooooooooooooooooooooooooong\"},\
+                            {\"Message\":\"Some messages here that is loooooooooooooooooooooooooooooooooooooong\"},\
+                            {\"Message\":\"Some messages here that is loooooooooooooooooooooooooooooooooooooong\"},\
+                            {\"Message\":\"Some messages here that is loooooooooooooooooooooooooooooooooooooong\"}\
+                          ]  \
                         }";
   return dataModel;
 }

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PMMessagingUIViewController : UIViewController
+@interface PMMessagingUIViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@property (nonatomic,weak) NSMutableArray   *messages;
+@property (nonatomic,weak) IBOutlet UICollectionView *collectionView;
 
 @end

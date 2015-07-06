@@ -26,6 +26,9 @@ NSString * const PMREGULARCELLIDENTIFIER = @"Cell";
     
     self.filteredGroupArray = [NSMutableArray arrayWithCapacity:2];
     
+    [self.tableView registerNib:[UINib nibWithNibName:@"PMCurrentUserInfoTableViewCell" bundle:nil] forCellReuseIdentifier:PMCURRENTUSERCELLIDENTIFIER];
+    [self.tableView registerNib:[UINib nibWithNibName:@"PMGroupTableViewCell" bundle:nil] forCellReuseIdentifier:PMREGULARCELLIDENTIFIER];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,8 +52,6 @@ NSString * const PMREGULARCELLIDENTIFIER = @"Cell";
     PMDataMockup *dataModel = [[PMDataMockup alloc] init];
     NSString *json_string = [dataModel getJSONData];
 
-    [self.tableView registerNib:[UINib nibWithNibName:@"PMCurrentUserInfoTableViewCell" bundle:nil] forCellReuseIdentifier:PMCURRENTUSERCELLIDENTIFIER];
-    [self.tableView registerNib:[UINib nibWithNibName:@"PMGroupTableViewCell" bundle:nil] forCellReuseIdentifier:PMREGULARCELLIDENTIFIER];
     groups = [NSJSONSerialization JSONObjectWithData:[json_string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
 }
 
@@ -130,6 +131,18 @@ NSString * const PMREGULARCELLIDENTIFIER = @"Cell";
     NSArray *groupSections = [groups objectForKey:@"GroupSections"];
     NSDictionary *groupSection = [groupSections objectAtIndex:(section-1)];
     return [groupSection objectForKey:@"Name"];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    // See this webpage, 3rd answer down or so : http://stackoverflow.com/questions/813068/uitableview-change-section-header-color
+    
+    // Background color
+    view.tintColor = [UIColor blackColor];
+    
+    // Text Color
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    [header.textLabel setTextColor:[UIColor whiteColor]];
 }
 
 /*
