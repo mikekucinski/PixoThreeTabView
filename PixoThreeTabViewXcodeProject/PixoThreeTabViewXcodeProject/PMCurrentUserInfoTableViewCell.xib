@@ -49,19 +49,23 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-dF-qHS">
+                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-dF-qHS">
                         <rect key="frame" x="0.0" y="115" width="320" height="44"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                     </searchBar>
                 </subviews>
+                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="qIs-IS-bGW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="0nU-tf-TDH"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mNL-9T-9e1" secondAttribute="trailing" constant="21" id="5Af-NO-LrE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="QLg-dF-qHS" secondAttribute="trailing" constant="-8" id="FRw-UD-ldp"/>
+                    <constraint firstItem="QLg-dF-qHS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="TDF-jv-5uC"/>
                     <constraint firstAttribute="trailingMargin" secondItem="mNL-9T-9e1" secondAttribute="trailing" constant="21" id="aAD-vM-aIT"/>
                     <constraint firstItem="mNL-9T-9e1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bAO-DQ-jXg"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QLg-dF-qHS" secondAttribute="bottom" constant="12" id="c3Q-Ik-tl8"/>
                     <constraint firstItem="mNL-9T-9e1" firstAttribute="leading" secondItem="qIs-IS-bGW" secondAttribute="trailing" constant="8" id="hQb-3J-uUn"/>
                     <constraint firstItem="qIs-IS-bGW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="oD8-AY-tev"/>
                 </constraints>
@@ -72,6 +76,7 @@
                 </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="nameLabelOfUser" destination="qIs-IS-bGW" id="Aei-NA-XCi"/>
                 <outlet property="thumbNailOfUser" destination="mNL-9T-9e1" id="bv6-Uw-ksh"/>

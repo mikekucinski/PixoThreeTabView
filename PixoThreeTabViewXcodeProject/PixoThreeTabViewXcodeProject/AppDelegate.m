@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "PMChatGroupTableViewController.h"
+#import "PMMessagingUIViewController.h"
+#import "PMUserListTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UITabBarController *tabBars = [[UITabBarController alloc] init];
+    tabBars.view.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    
+    PMMessagingUIViewController *messagingUI = [[PMMessagingUIViewController alloc] initWithNibName:@"PMMessagingUIViewController" bundle:nil];
+    messagingUI.tabBarItem.title = @"MessagingUI";
+    
+    PMChatGroupTableViewController *chatGroupTab = [[PMChatGroupTableViewController alloc] init];
+    chatGroupTab.tabBarItem.title = @"Chat Groups";
+    
+    PMUserListTableViewController *userListTab = [[PMUserListTableViewController alloc] init];
+    userListTab.tabBarItem.title = @"Users";
+    
+    tabBars.viewControllers = @[chatGroupTab,messagingUI,userListTab];
+    
+    self.window.rootViewController = tabBars;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

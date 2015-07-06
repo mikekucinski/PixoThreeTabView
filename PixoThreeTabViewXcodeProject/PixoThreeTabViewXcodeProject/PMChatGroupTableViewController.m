@@ -48,7 +48,7 @@ NSString * const PMREGULARCELLIDENTIFIER = @"Cell";
     NSError *error = nil;
     PMDataMockup *dataModel = [[PMDataMockup alloc] init];
     NSString *json_string = [dataModel getJSONData];
-    NSLog(@"%@", json_string);
+
     [self.tableView registerNib:[UINib nibWithNibName:@"PMCurrentUserInfoTableViewCell" bundle:nil] forCellReuseIdentifier:PMCURRENTUSERCELLIDENTIFIER];
     [self.tableView registerNib:[UINib nibWithNibName:@"PMGroupTableViewCell" bundle:nil] forCellReuseIdentifier:PMREGULARCELLIDENTIFIER];
     groups = [NSJSONSerialization JSONObjectWithData:[json_string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];

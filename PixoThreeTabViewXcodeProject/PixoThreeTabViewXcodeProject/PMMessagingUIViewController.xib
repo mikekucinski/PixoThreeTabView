@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMMessagingUIViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9Ip-dG-Zjb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="477"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="540" id="0cG-Gm-ugy"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4rz-gz-gnh">
+                        <size key="itemSize" width="120" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0cG-Gm-ugy"/>
+                        </mask>
+                    </variation>
+                </collectionView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="TLy-8g-LRF">
+                    <rect key="frame" x="8" y="485" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Hb2-Ud-CL6"/>
+                        <constraint firstAttribute="width" secondItem="TLy-8g-LRF" secondAttribute="height" multiplier="1:1" id="k7b-JP-s7x"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-VQ-Qht">
+                    <rect key="frame" x="542" y="485" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="77G-AF-IeZ"/>
+                        <constraint firstAttribute="width" secondItem="yqz-VQ-Qht" secondAttribute="height" multiplier="1:1" id="di6-2p-YG5"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ad6-if-gT5">
+                    <rect key="frame" x="61" y="495" width="468" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ad6-if-gT5" secondAttribute="bottom" constant="75" id="3Jw-0K-7WE"/>
+                <constraint firstAttribute="bottom" secondItem="yqz-VQ-Qht" secondAttribute="bottom" constant="65" id="6tK-vX-e0G"/>
+                <constraint firstItem="ad6-if-gT5" firstAttribute="leading" secondItem="TLy-8g-LRF" secondAttribute="trailing" constant="8" id="FOn-wS-oEL"/>
+                <constraint firstItem="TLy-8g-LRF" firstAttribute="top" secondItem="9Ip-dG-Zjb" secondAttribute="bottom" constant="8" id="Gkk-Nr-tdh"/>
+                <constraint firstAttribute="bottom" secondItem="yqz-VQ-Qht" secondAttribute="bottom" constant="72" id="Le1-K1-CAp"/>
+                <constraint firstItem="TLy-8g-LRF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="VM3-FE-Hvo"/>
+                <constraint firstItem="9Ip-dG-Zjb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ViU-MK-igh"/>
+                <constraint firstAttribute="trailing" secondItem="9Ip-dG-Zjb" secondAttribute="trailing" id="arA-hs-Qof"/>
+                <constraint firstItem="9Ip-dG-Zjb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c40-Nt-Qjo"/>
+                <constraint firstAttribute="bottom" secondItem="TLy-8g-LRF" secondAttribute="bottom" constant="65" id="cHI-uT-TvJ"/>
+                <constraint firstAttribute="bottom" secondItem="ad6-if-gT5" secondAttribute="bottom" constant="72" id="o0m-Sh-ei4"/>
+                <constraint firstAttribute="bottom" secondItem="TLy-8g-LRF" secondAttribute="bottom" constant="80" id="rFa-ZE-Ehz"/>
+                <constraint firstItem="yqz-VQ-Qht" firstAttribute="leading" secondItem="ad6-if-gT5" secondAttribute="trailing" constant="8" id="v2d-DQ-tOi"/>
+                <constraint firstAttribute="trailing" secondItem="yqz-VQ-Qht" secondAttribute="trailing" constant="8" id="vxD-7f-TG0"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="rFa-ZE-Ehz"/>
+                    <exclude reference="o0m-Sh-ei4"/>
+                    <exclude reference="Le1-K1-CAp"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="428" y="141"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>

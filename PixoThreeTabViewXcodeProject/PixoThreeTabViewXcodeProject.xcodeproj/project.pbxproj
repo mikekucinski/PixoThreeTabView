@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF026B291B48522A00FB5728 /* PMMessagingUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF026B271B48522A00FB5728 /* PMMessagingUIViewController.m */; };
+		CF026B2A1B48522A00FB5728 /* PMMessagingUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF026B281B48522A00FB5728 /* PMMessagingUIViewController.xib */; };
 		CF0A77241B475E4400E3C8A2 /* PMGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0A77221B475E4400E3C8A2 /* PMGroupTableViewCell.m */; };
 		CF0A77251B475E4400E3C8A2 /* PMGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A77231B475E4400E3C8A2 /* PMGroupTableViewCell.xib */; };
 		CF7345E61B45E7430031C438 /* PMChatGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7345E51B45E7430031C438 /* PMChatGroupTableViewController.m */; };
 		CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF7345E91B45F2520031C438 /* MockupGroups.plist */; };
+		CF99D57F1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF99D57D1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m */; };
+		CF99D5801B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF99D57E1B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib */; };
 		CFDC5DE81B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */; };
 		CFDC5DE91B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */; };
 		CFDC5DEC1B470F0B00E30D75 /* PMDataMockup.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC5DEB1B470F0B00E30D75 /* PMDataMockup.m */; };
@@ -24,8 +28,6 @@
 		D943FDA71B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FDA61B45C19A00539DB7 /* PixoThreeTabViewXcodeProjectTests.m */; };
 		D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */; };
 		D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */ = {isa = PBXBuildFile; fileRef = D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */; };
-		D9E1E4741B484DF000518866 /* PMContactSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E1E4721B484DF000518866 /* PMContactSearchTableViewCell.m */; };
-		D9E1E4751B484DF000518866 /* PMContactSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E1E4731B484DF000518866 /* PMContactSearchTableViewCell.xib */; };
 		D9E90D641B474A69004EEFF2 /* PMContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */; };
 		D9E90D651B474A69004EEFF2 /* PMContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */; };
 		F4DE1EE1FCA2B75C489676BD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F18D2833526A0BAD7E3FCA /* libPods.a */; };
@@ -44,6 +46,9 @@
 /* Begin PBXFileReference section */
 		42C82C89EF9967B7778D8E50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6486927BFC2C0F2551CE9F14 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CF026B261B48522A00FB5728 /* PMMessagingUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMMessagingUIViewController.h; sourceTree = "<group>"; };
+		CF026B271B48522A00FB5728 /* PMMessagingUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMMessagingUIViewController.m; sourceTree = "<group>"; };
+		CF026B281B48522A00FB5728 /* PMMessagingUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMMessagingUIViewController.xib; sourceTree = "<group>"; };
 		CF0A77211B475E4400E3C8A2 /* PMGroupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMGroupTableViewCell.h; sourceTree = "<group>"; };
 		CF0A77221B475E4400E3C8A2 /* PMGroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMGroupTableViewCell.m; sourceTree = "<group>"; };
 		CF0A77231B475E4400E3C8A2 /* PMGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMGroupTableViewCell.xib; sourceTree = "<group>"; };
@@ -51,6 +56,9 @@
 		CF7345E51B45E7430031C438 /* PMChatGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMChatGroupTableViewController.m; sourceTree = "<group>"; };
 		CF7345E81B45EB310031C438 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CF7345E91B45F2520031C438 /* MockupGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockupGroups.plist; sourceTree = "<group>"; };
+		CF99D57C1B4AE98B00A45D32 /* PMContactSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMContactSearchTableViewCell.h; sourceTree = "<group>"; };
+		CF99D57D1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMContactSearchTableViewCell.m; sourceTree = "<group>"; };
+		CF99D57E1B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMContactSearchTableViewCell.xib; sourceTree = "<group>"; };
 		CFDC5DE51B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCurrentUserInfoTableViewCell.h; sourceTree = "<group>"; };
 		CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCurrentUserInfoTableViewCell.m; sourceTree = "<group>"; };
 		CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCurrentUserInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -74,9 +82,6 @@
 		D943FDB01B45FB0100539DB7 /* PMUserListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMUserListTableViewController.h; sourceTree = "<group>"; };
 		D943FDB11B45FB0100539DB7 /* PMUserListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMUserListTableViewController.m; sourceTree = "<group>"; };
 		D943FDB31B45FE4E00539DB7 /* MockupUsers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockupUsers.plist; sourceTree = "<group>"; };
-		D9E1E4711B484DF000518866 /* PMContactSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMContactSearchTableViewCell.h; sourceTree = "<group>"; };
-		D9E1E4721B484DF000518866 /* PMContactSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMContactSearchTableViewCell.m; sourceTree = "<group>"; };
-		D9E1E4731B484DF000518866 /* PMContactSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMContactSearchTableViewCell.xib; sourceTree = "<group>"; };
 		D9E90D611B474A69004EEFF2 /* PMContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMContactTableViewCell.h; sourceTree = "<group>"; };
 		D9E90D621B474A69004EEFF2 /* PMContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMContactTableViewCell.m; sourceTree = "<group>"; };
 		D9E90D631B474A69004EEFF2 /* PMContactTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMContactTableViewCell.xib; sourceTree = "<group>"; };
@@ -142,9 +147,9 @@
 		D943FD861B45C19A00539DB7 /* PixoThreeTabViewXcodeProject */ = {
 			isa = PBXGroup;
 			children = (
-				D9E1E4711B484DF000518866 /* PMContactSearchTableViewCell.h */,
-				D9E1E4721B484DF000518866 /* PMContactSearchTableViewCell.m */,
-				D9E1E4731B484DF000518866 /* PMContactSearchTableViewCell.xib */,
+				CF99D57C1B4AE98B00A45D32 /* PMContactSearchTableViewCell.h */,
+				CF99D57D1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m */,
+				CF99D57E1B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib */,
 				D943FD8B1B45C19A00539DB7 /* AppDelegate.h */,
 				D943FD8C1B45C19A00539DB7 /* AppDelegate.m */,
 				D943FD8E1B45C19A00539DB7 /* FirstViewController.h */,
@@ -172,6 +177,9 @@
 				CF0A77211B475E4400E3C8A2 /* PMGroupTableViewCell.h */,
 				CF0A77221B475E4400E3C8A2 /* PMGroupTableViewCell.m */,
 				CF0A77231B475E4400E3C8A2 /* PMGroupTableViewCell.xib */,
+				CF026B261B48522A00FB5728 /* PMMessagingUIViewController.h */,
+				CF026B271B48522A00FB5728 /* PMMessagingUIViewController.m */,
+				CF026B281B48522A00FB5728 /* PMMessagingUIViewController.xib */,
 			);
 			path = PixoThreeTabViewXcodeProject;
 			sourceTree = "<group>";
@@ -285,13 +293,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D943FD961B45C19A00539DB7 /* Main.storyboard in Resources */,
+				CF026B2A1B48522A00FB5728 /* PMMessagingUIViewController.xib in Resources */,
 				D943FD9B1B45C19A00539DB7 /* LaunchScreen.xib in Resources */,
 				D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */,
-				D9E1E4751B484DF000518866 /* PMContactSearchTableViewCell.xib in Resources */,
 				CF0A77251B475E4400E3C8A2 /* PMGroupTableViewCell.xib in Resources */,
 				D943FD981B45C19A00539DB7 /* Images.xcassets in Resources */,
 				CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */,
 				CFDC5DE91B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib in Resources */,
+				CF99D5801B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib in Resources */,
 				D9E90D651B474A69004EEFF2 /* PMContactTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,14 +355,15 @@
 				D943FD931B45C19A00539DB7 /* SecondViewController.m in Sources */,
 				D9E90D641B474A69004EEFF2 /* PMContactTableViewCell.m in Sources */,
 				D943FD8D1B45C19A00539DB7 /* AppDelegate.m in Sources */,
+				CF99D57F1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m in Sources */,
 				D943FD901B45C19A00539DB7 /* FirstViewController.m in Sources */,
 				D943FD8A1B45C19A00539DB7 /* main.m in Sources */,
-				D9E1E4741B484DF000518866 /* PMContactSearchTableViewCell.m in Sources */,
 				CFDC5DE81B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m in Sources */,
 				CF7345E61B45E7430031C438 /* PMChatGroupTableViewController.m in Sources */,
 				D943FDB21B45FB0100539DB7 /* PMUserListTableViewController.m in Sources */,
 				CFDC5DEC1B470F0B00E30D75 /* PMDataMockup.m in Sources */,
 				CF0A77241B475E4400E3C8A2 /* PMGroupTableViewCell.m in Sources */,
+				CF026B291B48522A00FB5728 /* PMMessagingUIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +496,6 @@
 				INFOPLIST_FILE = PixoThreeTabViewXcodeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -498,7 +507,6 @@
 				INFOPLIST_FILE = PixoThreeTabViewXcodeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
