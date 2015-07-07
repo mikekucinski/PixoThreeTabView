@@ -15,8 +15,8 @@
 		CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF7345E91B45F2520031C438 /* MockupGroups.plist */; };
 		CF99D57F1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF99D57D1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m */; };
 		CF99D5801B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF99D57E1B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib */; };
-		CF99D5841B4B26EB00A45D32 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = CF99D5831B4B26EB00A45D32 /* bubble.png */; };
-		CF99D5861B4B27AC00A45D32 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CF99D5851B4B27AC00A45D32 /* plus.png */; };
+		CF99D5891B4B3D3D00A45D32 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = CF99D5871B4B3D3D00A45D32 /* bubble.png */; };
+		CF99D58A1B4B3D3D00A45D32 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = CF99D5881B4B3D3D00A45D32 /* plus.png */; };
 		CFDC5DE81B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */; };
 		CFDC5DE91B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */; };
 		CFDC5DEC1B470F0B00E30D75 /* PMDataMockup.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDC5DEB1B470F0B00E30D75 /* PMDataMockup.m */; };
@@ -61,8 +61,8 @@
 		CF99D57C1B4AE98B00A45D32 /* PMContactSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMContactSearchTableViewCell.h; sourceTree = "<group>"; };
 		CF99D57D1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMContactSearchTableViewCell.m; sourceTree = "<group>"; };
 		CF99D57E1B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMContactSearchTableViewCell.xib; sourceTree = "<group>"; };
-		CF99D5831B4B26EB00A45D32 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble.png; path = ../../../../Downloads/bubble.png; sourceTree = "<group>"; };
-		CF99D5851B4B27AC00A45D32 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = ../../../../Downloads/plus.png; sourceTree = "<group>"; };
+		CF99D5871B4B3D3D00A45D32 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		CF99D5881B4B3D3D00A45D32 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		CFDC5DE51B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMCurrentUserInfoTableViewCell.h; sourceTree = "<group>"; };
 		CFDC5DE61B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMCurrentUserInfoTableViewCell.m; sourceTree = "<group>"; };
 		CFDC5DE71B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMCurrentUserInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -151,7 +151,8 @@
 		D943FD861B45C19A00539DB7 /* PixoThreeTabViewXcodeProject */ = {
 			isa = PBXGroup;
 			children = (
-				CF99D5851B4B27AC00A45D32 /* plus.png */,
+				CF99D5871B4B3D3D00A45D32 /* bubble.png */,
+				CF99D5881B4B3D3D00A45D32 /* plus.png */,
 				CF99D57C1B4AE98B00A45D32 /* PMContactSearchTableViewCell.h */,
 				CF99D57D1B4AE98B00A45D32 /* PMContactSearchTableViewCell.m */,
 				CF99D57E1B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib */,
@@ -163,7 +164,6 @@
 				D943FD921B45C19A00539DB7 /* SecondViewController.m */,
 				D943FD941B45C19A00539DB7 /* Main.storyboard */,
 				D943FD971B45C19A00539DB7 /* Images.xcassets */,
-				CF99D5831B4B26EB00A45D32 /* bubble.png */,
 				D943FD991B45C19A00539DB7 /* LaunchScreen.xib */,
 				D943FD871B45C19A00539DB7 /* Supporting Files */,
 				CF7345E41B45E7430031C438 /* PMChatGroupTableViewController.h */,
@@ -301,15 +301,15 @@
 				D943FD961B45C19A00539DB7 /* Main.storyboard in Resources */,
 				CF026B2A1B48522A00FB5728 /* PMMessagingUIViewController.xib in Resources */,
 				D943FD9B1B45C19A00539DB7 /* LaunchScreen.xib in Resources */,
-				CF99D5861B4B27AC00A45D32 /* plus.png in Resources */,
-				CF99D5841B4B26EB00A45D32 /* bubble.png in Resources */,
 				D943FDB41B45FE4E00539DB7 /* MockupUsers.plist in Resources */,
 				CF0A77251B475E4400E3C8A2 /* PMGroupTableViewCell.xib in Resources */,
 				D943FD981B45C19A00539DB7 /* Images.xcassets in Resources */,
 				CF7345EA1B45F2520031C438 /* MockupGroups.plist in Resources */,
 				CFDC5DE91B46F2A300E30D75 /* PMCurrentUserInfoTableViewCell.xib in Resources */,
 				CF99D5801B4AE98B00A45D32 /* PMContactSearchTableViewCell.xib in Resources */,
+				CF99D5891B4B3D3D00A45D32 /* bubble.png in Resources */,
 				D9E90D651B474A69004EEFF2 /* PMContactTableViewCell.xib in Resources */,
+				CF99D58A1B4B3D3D00A45D32 /* plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
